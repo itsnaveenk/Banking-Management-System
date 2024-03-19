@@ -15,7 +15,7 @@ public class OpenAcc extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<html><head>"
-                + "<link rel=\"stylesheet\" type=\"text/css\" href=\"./resouces/acc_open.css\">"
+                + "<link rel=\"stylesheet\" type=\"text/css\" href=\"./resources/acc_open.css\">"
                 + "</head>");
         out.println("<body>");
         out.println("<section id=\"open-account\">");
@@ -36,7 +36,7 @@ public class OpenAcc extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
 
@@ -48,9 +48,9 @@ public class OpenAcc extends HttpServlet {
         // Here you can add the code to handle the new account creation using the form data
 
         CreateAccount user = new CreateAccount(name, email, password, deposit);
-        boolean flag = user.createAccount();
+        int flag = user.createAccount();
 
-        if (flag) {
+        if (flag==1) {
             out.println("<html><body>");
             out.println("<h1>Account Created Successfully</h1>");
             out.println("</body></html>");

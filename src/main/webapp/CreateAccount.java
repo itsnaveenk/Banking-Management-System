@@ -17,16 +17,20 @@ public class CreateAccount {
         this.deposit = deposit;
     }
 
-    public boolean createAccount() {
-        boolean flag = false;
+    public int createAccount() {
+        int flag = 0;
 
         try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/rana_bank", "root", "root");
-            connection.createStatement().execute("INSERT INTO users (name, email, password, balance) VALUES ('" + name + "', '" + email + "', '" + password + "', " + deposit + ")");
-            flag = true;
+            flag = connection.createStatement().executeUpdate("INSERT INTO users (name, email, password, balance) VALUES ('" + name + "', '" + email + "', '" + password + "', " + deposit + ")");
+
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
+        }
+        catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
 
         return flag;

@@ -3,12 +3,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Bank - Manage Your Finances Easily</title>
-    <link href="./resouces/styles1.css"
+    <link href="./resources/styles1.css"
           rel="stylesheet"> </head>
 
 <body>
 <header>
-    <h1><img src="./resouces/logo.jpeg" alt="Your Bank Logo"> Rana Bank</h1>
+    <h1><img src="./resources/logo.jpeg" alt="Your Bank Logo"> Rana Bank</h1>
     <p>Manage your finances effortlessly online.</p>
 </header>
 
@@ -44,9 +44,6 @@
 <footer>
     <p>&copy; RANA Bank. All Rights Reserved.</p>
 </footer>
-
-</body>
-</html>
 
 </body>
 </html>
