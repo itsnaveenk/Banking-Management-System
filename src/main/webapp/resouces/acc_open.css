@@ -1,0 +1,51 @@
+body{
+    background-color: #364156;
+}
+#open-account {
+    color: #f0f0f0;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #3d4c67;
+}
+
+#open-account h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#open-account form {
+    display: flex;
+    flex-direction: column;
+}
+
+#open-account label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#open-account input[type="text"],
+#open-account input[type="email"],
+#open-account input[type="password"],
+#open-account input[type="number"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#open-account input[type="submit"] {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#open-account input[type="submit"]:hover {
+    background-color: #0056b3;
+}
