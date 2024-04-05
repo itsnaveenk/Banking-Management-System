@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +9,7 @@
 
 <body>
 <header>
-    <h1><img src="./resources/logo.jpeg" alt="Your Bank Logo"> Rana Bank</h1>
+    <h1><img src="./resources/logo.png" alt="Your Bank Logo"> Rana Bank</h1>
     <p>Manage your finances effortlessly online.</p>
 </header>
 
@@ -17,7 +18,7 @@
         <h2>Take control of your money today.</h2>
         <p>Our online banking platform offers a secure and convenient way to manage your accounts, transfer funds, pay bills, and more.</p>
         <a href="./accountOpen" class="button">Open an Account</a>
-        <a href="#" class="button">Login</a>
+        <a href="./login.jsp" class="button">Login</a>
     </section>
 
     <section class="features">

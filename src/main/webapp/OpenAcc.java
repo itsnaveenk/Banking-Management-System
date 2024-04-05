@@ -49,15 +49,69 @@ public class OpenAcc extends HttpServlet {
 
         CreateAccount user = new CreateAccount(name, email, password, deposit);
         int flag = user.createAccount();
+        out.println("<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<head>\n" +
+                "    <meta charset=\"UTF-8\">\n" +
+                "    <title>Account Created Successfully</title>\n" +
+                "    <style>" +
+                "body {\n" +
+                "    font-family: Arial, sans-serif;\n" +
+                "    margin: 0;\n" +
+                "    padding: 0;\n" +
+                "    background-color: #f4f4f4;\n" +
+                "}\n" +
+                "\n" +
+                ".container {\n" +
+                "    width: 80%;\n" +
+                "    margin: 0 auto;\n" +
+                "    text-align: center;\n" +
+                "    padding-top: 50px;\n" +
+                "}\n" +
+                "\n" +
+                "h1 {\n" +
+                "    color: #333;\n" +
+                "}\n" +
+                "\n" +
+                "p {\n" +
+                "    color: #666;\n" +
+                "    font-size: 1.2em;\n" +
+                "}\n" +
+                "\n" +
+                ".login-button {\n" +
+                "    display: inline-block;\n" +
+                "    color: #fff;\n" +
+                "    background-color: #3498db;\n" +
+                "    padding: 10px 20px;\n" +
+                "    margin-top: 20px;\n" +
+                "    text-decoration: none;\n" +
+                "    border-radius: 5px;\n" +
+                "    transition: background-color 0.3s ease;\n" +
+                "}\n" +
+                "\n" +
+                ".login-button:hover {\n" +
+                "    background-color: #2980b9;\n" +
+                "}" +
+                "</style>\n" +
+                "</head>");
 
-        if (flag==1) {
-            out.println("<html><body>");
-            out.println("<h1>Account Created Successfully</h1>");
-            out.println("</body></html>");
+        if (flag == 1) {
+            out.println("<body>\n" +
+                    "    <div class=\"container\">\n" +
+                    "        <h1>Account Created Successfully</h1>\n" +
+                    "        <p>Your account has been created successfully. You can now login to your account.</p>\n" +
+                    "        <a href=\"login.jsp\" class=\"login-button\">Login</a>\n" +
+                    "    </div>\n" +
+                    "</body>\n" +
+                    "</html> ");
         } else {
-            out.println("<html><body>");
-            out.println("<h1>Account Creation Failed</h1>");
-            out.println("</body></html>");
+            out.println("<body>\n" +
+                    "    <div class=\"container\">\n" +
+                    "        <h1>Account Creation Failed.</h1>\n" +
+                    "<p>Please contact support team</p>\n" +
+                    "    </div>\n" +
+                    "</body>\n" +
+                    "</html> ");
 
         }
     }
