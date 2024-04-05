@@ -39,7 +39,4 @@ These instructions will get you a copy of the project up and running on your loc
 1. Open the application in your web browser.
 2. Register a new account or log in to an existing one.
 3. Use the dashboard to deposit, withdraw, or transfer money.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+4. Log out when done.
