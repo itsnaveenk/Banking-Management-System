@@ -16,6 +16,7 @@ This project is an online banking system developed using Java Servlets and JSP. 
 - Servlets
 - JSP
 - MySQL
+- Tomcat
 
 ## Getting Started
 
